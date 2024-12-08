@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenali Budaya Nusantara</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Kenali Budaya Nusantara</h1>
+        <p>Tebak nama alat musik atau tarian dari petunjuk yang diberikan!</p>
+    </header>
+    <main>
+        <section id="game">
+            <img id="image" src="gamelan.jpg" alt="Gambar Budaya" style="width: 300px;">
+            <p id="question">Apa nama alat musik ini?</p>
+            <button onclick="checkAnswer('Gamelan')">Gamelan</button>
+            <button onclick="checkAnswer('Angklung')">Angklung</button>
+            <p id="result"></p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Kenali Budaya Nusantara</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf6e3;
+    color: #333;
+    text-align: center;
+}
+header {
+    background-color: #ff9900;
+    color: white;
+    padding: 20px;
+}
+main {
+    padding: 20px;
+}
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #45a049;
+}
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+function checkAnswer(answer) {
+    const result = document.getElementById('result');
+    if (answer === 'Gamelan') {
+        result.textContent = 'Benar! Ini adalah Gamelan, alat musik tradisional dari Jawa.';
+        result.style.color = 'green';
+    } else {
+        result.textContent = 'Salah. Coba lagi!';
+        result.style.color = 'red';
+    }
+}
